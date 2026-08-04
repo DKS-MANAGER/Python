@@ -1,22 +1,54 @@
-# Python
+# Python — Scientific Computing & CFD Data Analysis
 
-General-purpose Python learning and experimentation repo — Jupyter notebooks covering scientific computing, data analysis, and utilities relevant to CFD post-processing and engineering workflows.
+[![Python](https://img.shields.io/badge/Python-Jupyter%20Notebook-orange)](https://jupyter.org)
+[![Status](https://img.shields.io/badge/Status-Active-green)]()
 
-## Topics
-- NumPy / SciPy arrays and operations
-- Matplotlib / Seaborn visualization
-- Data processing pipelines
-- CFD post-processing experiments (fluidfoam, VTK)
+> Python scripts and Jupyter notebooks for **scientific computing, numerical methods, and CFD post-processing**. Covers data extraction from OpenFOAM binary fields, matplotlib visualization, numpy/scipy numerical routines, and general Python programming exercises.
 
-## Stack
-- **Language**: Python (Jupyter Notebook)
-- **Environment**: JupyterLab / VSCode + IPython kernel
+---
 
-## Quick Start
-```bash
-pip install numpy scipy matplotlib jupyter
-jupyter notebook
+## Contents
+
+| Folder / Notebook | Topic |
+|:---|:---|
+| `openfoam_postprocess/` | Binary field reader, scour depth extraction, alpha.a threshold tracking |
+| `numerical_methods/` | Root finding, ODE solvers (RK4, Euler), FDM 1D/2D |
+| `data_visualization/` | matplotlib: contour plots, time series, validation overlays |
+| `general/` | Python fundamentals, string ops, file I/O, regex |
+
+---
+
+## Key Scripts
+
+```python
+# Extract scour depth from OpenFOAM binary alpha.a field
+python openfoam_postprocess/extract_scour.py
+
+# Plot SedFoam result vs. Mao (1986) experimental data
+python data_visualization/plot_validation.py
 ```
 
-## Status
-Ongoing scratchpad — Mar 2026. Used for testing snippets before integration into research pipelines.
+---
+
+## Dependencies
+
+```bash
+pip install numpy scipy matplotlib pandas jupyter
+```
+
+---
+
+## Related CFD Projects
+
+| Repo | Description |
+|:---|:---|
+| [2DPipelineScour](https://github.com/DKS-MANAGER/2DPipelineScour) | Pipeline scour OpenFOAM case |
+| [bridge_sedfoam](https://github.com/DKS-MANAGER/bridge_sedfoam) | Bridge pier scour OpenFOAM case |
+
+---
+
+## Author
+
+**Divyansh Kumar Singh (DKS)**  
+M.Tech — Civil Engineering, IIT Kanpur  
+[GitHub](https://github.com/DKS-MANAGER)
